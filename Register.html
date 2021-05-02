@@ -1,0 +1,82 @@
+<html>
+<head><title>Registraion/Chitkara Troastmasters</title>
+<link href="final.css" rel="stylesheet" type="text/css">
+</head>
+<body style="background-image:url('background.jpg');background-size:40%;background-repeat:no-repeat;background-position: 850px 150px;">
+<script>
+function validatefn(){
+  var fname=document.getElementById("firstname").value;
+  if(fname.length<2){
+    document.getElementById("validate1").innerHTML="enter at least 2 characters in name!";
+  }
+  else{
+    document.getElementById("validate1").innerHTML="";
+  }
+}
+function validatepn(){
+  var pn=document.getElementById("phoneno").value;
+  var re3=/^\d{3}-\d{3}-\d{4}$/;
+  if(re3.test(pn)){
+    document.getElementById("validate2").innerHTML="";
+  }
+  else{
+    document.getElementById("validate2").innerHTML="enter phone number in xxx-xxx-xxxx format!";
+  }
+}
+function register() {
+  alert("Thank You For Registering! You will be intimated by all the details via mail.");
+}
+function validateemail(){
+  var email=document.getElementById("email").value;
+  if(email==""){
+    alert("Please fill your email.");
+    return false;
+  }
+}
+</script>
+<table width="100%"bgcolor="#772432"><tr>
+<th rowspan="2"><img width="100" class="tlogo" src="logo1.jpg"></th>
+<th style="color:white;">WHERE LEADERS ARE MADE</th>
+<th class="color"><a href="final.html">Home</th>
+<th class="color"><a href="Aboutus.html">About Us</a></th>
+<th class="color"><a href="Events.html">Events</a></th>
+<th class="color"><a href="Register.html">Register</a></th>
+<th class="color"><a href="Contact.html">Contact Us</th>
+<th><img "align="right" width="200" src="3.jpg"></th></tr>
+</table>
+<h1 style="color:#772432;align:center;" align="left">TO REGISTER FOR INTERVIEW, FILL OUT THE FORM BELOW!</h1><br><br><br>
+<form align="center" bgcolor="#772432" style="border:solid black 2">
+<table  class="register" bgcolor="#772432" height="300px" width="500px" align="left" style="margin-left:80px;">
+               <tr>
+                              <td>  Enter Name</td>
+                              <td><input id="firstname" type="text" maxlength="30" width="25px" style="border-style:solid;border-color:black;" onblur="validatefn()" required placeholder="This is a required field."></td>
+               </tr>
+               <tr>
+                              <td>  Email </td>
+                              <td><input  id="email" type="email" width="25px" style="border-style:solid;border-color:black;" required placeholder="This is a required field."></td>
+               </tr>
+               <tr>
+                              <td>  Phone Number </td>
+                              <td><input id="phoneno" type="text" width="25px" style="border-style:solid;border-color:black;" onblur="validatepn()" placeholder="Enter in xxx-xxx-xxxx format!"> </td>
+               <tr>
+                              <td>  University Roll Number </td>
+                              <td><input type="number" width="25px" style="border-style:solid;border-color:black;"></td>
+               </tr>
+               <tr>
+                              <td>  Branch</td>
+                              <td><input type="text" width="15px" style="border-style:solid;border-color:black;" ></td>
+               </tr>
+		<tr>
+				<td align="center" colspan="2"><input align="center" type="submit" style="border-style:solid;border-color:black;" onclick="validateemail();register();"></td>
+		</tr>
+</table>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<p align="left"><span id="validate1"></span><br><span id="validate2"></span><br><span id="validate3"></span></p>
+<br><br><br><br><br>
+<div class="contact">
+<br><br>
+<p style="color:white" align="middle">For more information, feel free to contact the <a  class="change" href="Contact.html" style="color:white;text-decoration:none;">Chitkara University Toastmasters Club.</a></p><hr color="white">
+</div>
+</form>
+</body>
+</html>

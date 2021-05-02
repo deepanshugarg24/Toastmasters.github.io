@@ -1,0 +1,25 @@
+function changecolor(){
+document.getElementById("color").style.backgroundColor = "grey";
+}
+function validatefn(){
+var fn=document.getElementById("firstname").value;
+if(fn.length<2){
+document.getElementById("fnprompt").innerHTML="enter at least 2 characters!";
+}
+else{
+document.getElementById("fnprompt").innerHTML="Registered successfully!!";
+}
+}
+function validatepn(){
+var pn=document.getElementById("phoneno").value;
+var re3=/^\d{3}-\d{3}-\d{4}$/;
+if(re3.test(pn)){
+document.getElementById("pnprompt").innerHTML="Registered successfully!!";
+}
+else{
+document.getElementById("pnprompt").innerHTML="Enter in xxx-xxx-xxxx format!";
+}
+}
+function register(){
+alert("Thank You For Your Time!!");
+}
